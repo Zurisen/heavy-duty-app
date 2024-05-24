@@ -64,12 +64,17 @@ class _MasterScreenScaffoldState extends State<MasterScreenScaffold> {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const [
-            DrawerHeader(
+          children: [
+            const DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.blue
               ),
               child: Text("Heavy Duty App"),
+            ),
+            ListTile(
+              leading: Icon(Ionicons.log_out),
+              title: Text('Log Out'),
+              onTap: () => AuthService().signOut()
             )
           ],
         ),

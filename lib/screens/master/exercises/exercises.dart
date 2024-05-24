@@ -5,6 +5,14 @@ class ExercisesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Exercises');
+    
+    return Container(
+      child: Center(
+        child: ElevatedButton(
+          onPressed: () => {throw Exception('test exception')},
+          child: Text('throw exception'),
+        ),
+      ),
+    );
   }
 }
